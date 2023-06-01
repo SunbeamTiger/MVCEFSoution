@@ -1,0 +1,29 @@
+﻿@using MVCAppWithEF.ViewModels
+@model EditCustomerViewModel
+<form asp-action="Edit" asp-controller="Cust" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <div class="form-group row">
+            <label for="Firstname">First Name</label>
+            <input type="text" asp-for="FirstName" class="form-control" id="Firstname" />
+        </div>
+        <div class="form-group row">
+            <label for="Lastname">Last Name</label>
+            <input type="text" asp-for="LastName" class="form-control" id="LastName"  />
+        </div>
+        <div class="form-group row">
+            <label for="City">City</label>
+            <input type="text" asp-for="City" class="form-control" id="City"  />
+        </div>
+        <div class="form-group row">
+            <label for="Country">Country</label>
+            <input type="text" asp-for="Country" class="form-control" id="Country" />
+        </div>
+        <div class="form-group row">
+            <label for="Phone">Phone</label>
+            <input type="text" asp-for="Phone" class="form-control" id="Phone" value="@Model.Phone" />
+        </div>
+        <button type="submit">UPDATE</button>
+    </div>
+
+</form>

@@ -1,0 +1,8 @@
+﻿@using DBProject.Models;
+@model Customer
+
+<h2>Customer Details for @Model.LastName, @Model.FirstName </h2>
+<div>
+    @Model.LastName  @Model.FirstName  @Model.Country @Model.Phone @Model.City
+    <a asp-action="Edit" asp-route-id="@Model.Id" asp-controller="Cust">EDIT</a>
+</div>

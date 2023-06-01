@@ -32,5 +32,12 @@ namespace DBProject.Models
         {
             return _context.Customers.Find(CustomerID);
         }
+        public Customer Update(Customer customer)
+        {
+            var c = _context.Customers.Attach(customer);
+            c.State= EntityState.Modified;  
+            _context.SaveChanges();
+            return customer;
+        }
     }
 }

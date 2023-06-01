@@ -1,0 +1,14 @@
+﻿@using DBProject.Models;
+@model List<Customer>
+
+    <div class="text-center">
+        <h2 class="display-4">Current Customers</h2>
+     
+        @foreach(var c in Model)
+        {
+            <div class="card col-lg-6 mb-4">
+                <div>@c.LastName, @c.FirstName </div>
+                <a asp-action="Details" asp-route-id="@c.Id" asp-controller="Cust">Details</a>
+            </div>
+        }
+    </div>

@@ -10,5 +10,6 @@ namespace DBProject.Models
     {
         IEnumerable<Customer> GetAllCustomers();
         Customer GetCustomerById(int CustomerID);
+        Customer Update(Customer customer); 
     }
 }

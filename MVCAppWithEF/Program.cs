@@ -34,7 +34,7 @@ namespace MVCAppWithEF
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Cust}/{action=Index}/{id?}");
 
             app.Run();
         }
